@@ -1,0 +1,53 @@
+﻿
+ 
+
+body { background-color:darkgreen; font-size:22px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cssdetails{ background-color:white; margin:5px 0
+10px 0; border:solid 1px #525252; border-collapse:
+collapse; text-align: center; }
+
+.cssdetails td { padding:10px; border:solid 3px black; color:black; text-align:
+left;}
+li {
+    display: inline;
+}
+
+a { text-decoration:none; color:black; }
+
+a:hover, a:active, a:visited { text-decoration:none; color:black; }
+
+
+.cssgridview { width:100%; 
+               border-collapse:collapse;}
+
+.cssgridview td { padding:10px; border:solid 3px;}
+.cssgridview th {padding:10px; border: solid 3px;}
+
+.centered {text-align:center; align-items:center;
+}
+
+.container {width:650px; margin: 0 auto; border:3px solid black;
+}
+
+.header { background-color:black; color:white;  
+          height: 100px; text-align:center; padding: 30px; font-size: 48px;
+          }
+.footer { background-color:black; color:white;  
+          height: 25px; text-align:center; padding: 30px; font-size: 30px;
+          }
+
+
+
+.navmenu { clear:both;  background-color:white; font-size:18px;
+           padding-left:10px; padding-right:10px; padding-top:6px; text-align:center;
+}
+

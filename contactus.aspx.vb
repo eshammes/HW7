@@ -1,5 +1,5 @@
 ﻿
-Partial Class gamedetails
+Partial Class contactus
     Inherits System.Web.UI.Page
 
 End Class

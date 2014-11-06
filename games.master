@@ -1,0 +1,54 @@
+﻿<%@ Master Language="VB" CodeFile="games.master.vb" Inherits="games" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+         
+        <div class="container">
+            
+               
+        
+          <div class="header">
+              <asp:Image ID="xboxlogo" runat="server" Height="71px" style="margin-bottom: 0px" Width="88px" align="left" ImageUrl="~/css/xbox-one-logo-black.jpg"/>
+              <asp:Label ID="lbl_date" runat="server" Text="Top-Selling Video Games" Font-Size="36px"></asp:Label>
+              <asp:Image ID="ps4logo" runat="server" Height="66px" Width="92px" align="right" ImageUrl="~/css/ps4-logo.jpg" style="margin-right: 0px"/>
+              </div>
+
+
+         <div class="navmenu">
+           <ul>
+               
+               <li>
+                   <asp:HyperLink ID="linkhome" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink> | 
+                   <asp:HyperLink ID="linkaboutus" runat="server" NavigateUrl="~/aboutus.aspx">About Us</asp:HyperLink> | 
+                   <asp:HyperLink ID="linkcontact" runat="server" NavigateUrl="~/contactus.aspx">Contact Us</asp:HyperLink> | 
+                   <asp:HyperLink ID="linksearch" runat="server" NavigateUrl="~/search.aspx">Search</asp:HyperLink> | 
+                   <asp:LoginStatus ID="LoginStatus1" runat="server" />
+               </li>
+           </ul>
+             
+        </div>
+            </div>
+        <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div class="footer">
+        <asp:Label ID="dateLabel" runat="server"></asp:Label>
+        <asp:Label ID="timeLabel" runat="server"></asp:Label>
+            
+        </div>
+       
+    </form>
+</body>
+</html>
