@@ -46,8 +46,10 @@
         <div class="footer">
         <asp:Label ID="dateLabel" runat="server"></asp:Label>
         <asp:Label ID="timeLabel" runat="server"></asp:Label>
+            <b /> 
             
-        </div>
+            <br />
+            Copyright © 2014 Software Design and Development. Created by Evan Hammes</div>
        
     </form>
 </body>

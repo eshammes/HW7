@@ -37,7 +37,7 @@
         <br />
     
    
-        <asp:GridView cssclass="cssdetails"  AlternatingRowstyle-CssClass="alt" ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="gameID" DataSourceID="sql_games" style="margin-right: 53px" Width="809px" HorizontalAlign="Center">
+        <asp:GridView cssclass="cssdetails"  AlternatingRowstyle-CssClass="alt" ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="gameID" DataSourceID="sql_games" style="margin-right: 53px" Width="797px" HorizontalAlign="Center">
             <Columns>
                 <asp:BoundField DataField="game_name" HeaderText="Game Name" SortExpression="game_name" />
                 <asp:BoundField DataField="release_year" HeaderText="Release Year" SortExpression="release_year" />

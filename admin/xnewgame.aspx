@@ -1,9 +1,16 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/games.master" AutoEventWireup="false" CodeFile="newgame.aspx.vb" Inherits="admin_newgameaspx" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="xnewgame.aspx.vb" Inherits="detailsview" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:SqlDataSource ID="Sql_details" runat="server" ConnectionString="<%$ ConnectionStrings:eshammes_HW7 %>" 
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+        <asp:SqlDataSource ID="Sql_details" runat="server" ConnectionString="<%$ ConnectionStrings:eshammes_HW7 %>" 
             SelectCommand="SELECT * FROM [eshammes_HW7]" DeleteCommand="DELETE FROM [eshammes_HW7] WHERE [gameID] = @gameID" InsertCommand="INSERT INTO [eshammes_HW7] ([game_name], [release_year], [genre], [platforms], [developer], [publisher], [copies_sold], [awards], [prequel], [sequel]) VALUES (@game_name, @release_year, @genre, @platforms, @developer, @publisher, @copies_sold, @awards, @prequel, @sequel)" UpdateCommand="UPDATE [eshammes_HW7] SET [game_name] = @game_name, [release_year] = @release_year, [genre] = @genre, [platforms] = @platforms, [developer] = @developer, [publisher] = @publisher, [copies_sold] = @copies_sold, [awards] = @awards, [prequel] = @prequel, [sequel] = @sequel WHERE [gameID] = @gameID" >
            
             <DeleteParameters>
@@ -37,8 +44,8 @@
            
         </asp:SqlDataSource>
     
-    
-        <asp:DetailsView cssclass="cssdetails" HorizontalAlign="Center" ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="gameID" DataSourceID="Sql_details" Height="50px" Width="452px" DefaultMode="Insert">
+    </div>
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="gameID" DataSourceID="Sql_details" Height="50px" Width="452px" DefaultMode="Insert">
             <Fields>
                 <asp:BoundField DataField="game_name" HeaderText="Game Name" SortExpression="game_name" />
                 <asp:BoundField DataField="release_year" HeaderText="Release Year" SortExpression="release_year" />
@@ -53,5 +60,6 @@
                 <asp:CommandField ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
-</asp:Content>
-
+    </form>
+</body>
+</html>

@@ -4,8 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <p>
-        <br /> 
-        <asp:SqlDataSource ID="sqlgames" runat="server" ConnectionString="<%$ ConnectionStrings:eshammes_HW7 %>" SelectCommand="SELECT [gameID], [game_name], [release_year], [genre], [copies_sold] FROM [eshammes_HW7]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="sqlgames" runat="server" ConnectionString="<%$ ConnectionStrings:eshammes_HW7 %>" SelectCommand="SELECT [game_name], [release_year], [genre], [copies_sold], [gameID] FROM [eshammes_HW7]"></asp:SqlDataSource>
     </p><div style="padding-right: 25%; padding-left: 40%; font-style: italic; color: white">
     <p>
         <asp:Label ID="Label1" runat="server" Text="Search for a game by name."></asp:Label>
@@ -13,8 +12,7 @@
     <p>
         <asp:TextBox ID="search_tb" runat="server"></asp:TextBox>
     </p></div>
-    <p>
-        &nbsp;</p><div style="padding-right: 25%; padding-left: 17%; font-style: italic;">
+    <div style="padding-right: 25%; padding-left: 18%; font-style: italic;">
     <asp:GridView cssclass="cssdetails" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="gameID" DataSourceID="sqlgames" Width="863px">
         <Columns>
             <asp:BoundField DataField="game_name" HeaderText="Name" SortExpression="game_name" />

@@ -1,13 +1,8 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="gamedetails.aspx.vb" Inherits="detailsview" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/games.master" AutoEventWireup="false" CodeFile="gamedetails.aspx.vb" Inherits="admin_gamedetails" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div>
     
         <asp:SqlDataSource ID="Sql_details" runat="server" ConnectionString="<%$ ConnectionStrings:eshammes_HW7 %>" DeleteCommand="DELETE FROM [eshammes_HW7] WHERE [gameID] = @gameID" InsertCommand="INSERT INTO [eshammes_HW7] ([game_name], [release_year], [genre], [platforms], [developer], [publisher], [copies_sold], [awards], [prequel], [sequel]) VALUES (@game_name, @release_year, @genre, @platforms, @developer, @publisher, @copies_sold, @awards, @prequel, @sequel)" SelectCommand="SELECT * FROM [eshammes_HW7] WHERE ([gameID] = @gameID)" UpdateCommand="UPDATE [eshammes_HW7] SET [game_name] = @game_name, [release_year] = @release_year, [genre] = @genre, [platforms] = @platforms, [developer] = @developer, [publisher] = @publisher, [copies_sold] = @copies_sold, [awards] = @awards, [prequel] = @prequel, [sequel] = @sequel WHERE [gameID] = @gameID">
@@ -43,9 +38,10 @@
                 <asp:Parameter Name="gameID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
+        <div class="header">ADMIN</div><br />
     
     </div>
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="gameID" DataSourceID="Sql_details" Height="50px" Width="452px">
+        <asp:DetailsView cssclass="cssdetails" HorizontalAlign="Center" ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="gameID" DataSourceID="Sql_details" Height="50px" Width="452px">
             <Fields>
                 <asp:BoundField DataField="game_name" HeaderText="Game Name" SortExpression="game_name" />
                 <asp:BoundField DataField="release_year" HeaderText="Release Year" SortExpression="release_year" />
@@ -60,6 +56,5 @@
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             </Fields>
         </asp:DetailsView>
-    </form>
-</body>
-</html>
+</asp:Content>
+
